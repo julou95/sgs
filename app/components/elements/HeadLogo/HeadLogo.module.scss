@@ -3,7 +3,7 @@
 .text {
   color: white;
   text-decoration: overline underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 7px;
   transform: skew(-10deg, 0);
   text-shadow:
           0 -0.02em 0 #0c2ffb,
@@ -14,10 +14,18 @@
   user-select: none;
   user-focus: none;
 
-  @include breakpoint('sm') {
-    text-underline-offset: 5px;
+  &.full {
+    display: none;
   }
+
   @include breakpoint('md') {
+    &.full {
+      display: block;
+    }
+    &.small {
+      display: none;
+    }
+
     text-underline-offset: 9px;
   }
 }

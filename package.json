@@ -17,6 +17,7 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "10.0.0",
     "react": "17.0.0",
     "react-dom": "17.0.0",

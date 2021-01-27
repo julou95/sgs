@@ -2,19 +2,16 @@
 
 .navBar {
   display: flex;
-  justify-content: center;
   align-items: center;
   position: sticky;
   top: -1px;
   background-color: #14181d;
-  padding: 31px 20px 30px;
-  font-size: 20px;
+  padding: 31px 30px 30px;
+  font-size: 40px;
   color: transparent;
   transition: all .3s;
-  @include breakpoint('sm') {
-    font-size: 30px;
-  }
-  @include breakpoint('md') {
+
+  @include breakpoint('lg') {
     font-size: 50px;
   }
 }
@@ -26,15 +23,18 @@
 
 .icons {
   position: absolute;
-  right: 50px;
+  right: 20px;
   opacity: 0.1;
   transition: all 0.3s ease;
   > a {
     color: white;
-    padding: 20px;
+    padding: 10px;
     &:hover {
       color: #d2d2d2;
     }
+  }
+  @include breakpoint('md') {
+
   }
 }
 
