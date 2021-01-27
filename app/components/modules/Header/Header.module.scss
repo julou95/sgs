@@ -1,0 +1,133 @@
+@import 'app.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightsteelblue;
+  -webkit-box-shadow: inset 0px 0px 25px 10px rgb(0 0 0 / 80%);
+  box-shadow: inset 0px 0px 25px 10px rgb(0 0 0 / 80%);
+  overflow: hidden;
+}
+
+.header:after {
+  content: "";
+  background-image: url("/grain.png");
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.deconstructed {
+  position: relative;
+  margin: auto;
+  color: transparent;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15vw;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.03em;
+  transform: skew(-10deg, -1deg);
+}
+
+@include breakpoint('sm') {
+  .deconstructed {
+    font-size: 100px;
+  }
+}
+
+@include breakpoint('lg') {
+  .header {
+    -webkit-box-shadow: inset 0px 0px 75px 50px rgb(0 0 0 / 80%);
+    box-shadow: inset 0px 0px 75px 50px rgb(0 0 0 / 80%);
+  }
+  .deconstructed {
+    font-size: 150px;
+  }
+}
+
+.deconstructed > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  pointer-events: none;
+  text-shadow:
+          0 -0.02em 0 #0c2ffb,
+          0 -0.05em 0 #2cfcfd,
+          0 0.03em 0 #fb203b,
+          0 0.05em 0 #fefc4b;
+}
+
+.deconstructed > div:nth-child(1) {
+  -webkit-mask-image: linear-gradient(black 25%, transparent 26%);
+  mask-image: linear-gradient(black 25%, transparent 25%);
+  /*   animation: deconstructed1 5s infinite; */
+}
+
+.deconstructed > div:nth-child(2) {
+  -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  transform: translateX(-0.2%);
+  animation: deconstructed2 3s infinite;
+}
+
+.deconstructed > div:nth-child(3) {
+  -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  transform: translateX(0.1%);
+  animation: deconstructed3 2s infinite;
+}
+
+.deconstructed > div:nth-child(4) {
+  -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+  mask-image: linear-gradient(transparent 75%, black 75%);
+  /*   animation: deconstructed4 5s infinite; */
+}
+
+@keyframes deconstructed2 {
+  0% {
+    transform: translateX(-0.2%);
+  }
+  1% {
+    transform: translateX(0.5%);
+  }
+  2% {
+    transform: translateX(0.2%);
+  }
+  5% {
+    transform: translateX(-0.2%);
+  }
+  100% {
+    transform: translateX(-0.2%);
+  }
+}
+
+@keyframes deconstructed3 {
+  0% {
+    transform: translateX(0.2%);
+  }
+  30% {
+    transform: translateX(0.2%);
+  }
+  31% {
+    transform: translateX(-0.2%);
+  }
+  32% {
+    transform: translateX(0.2%);
+  }
+  100% {
+    transform: translateX(0.2%);
+  }
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 10px;
+}
