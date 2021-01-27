@@ -1,11 +1,23 @@
+@import 'app.scss';
+
 .text {
   color: white;
   text-decoration: overline underline;
-  text-underline-offset: 7px;
-  transform: skew(-10deg, -3deg);
+  text-underline-offset: 3px;
+  transform: skew(-10deg, 0);
   text-shadow:
           0 -0.02em 0 #0c2ffb,
           0 -0.05em 0 #2cfcfd,
           0 0.03em 0 #fb203b,
           0 0.05em 0 #fefc4b;
+  transition: all 0.3s ease;
+  user-select: none;
+  user-focus: none;
+
+  @include breakpoint('sm') {
+    text-underline-offset: 5px;
+  }
+  @include breakpoint('md') {
+    text-underline-offset: 9px;
+  }
 }

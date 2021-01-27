@@ -7,24 +7,41 @@
   position: sticky;
   top: -1px;
   background-color: #14181d;
-  padding: 31px 0 30px;
-  font-size: 50px;
+  padding: 31px 20px 30px;
+  font-size: 20px;
   color: transparent;
   transition: all .3s;
+  @include breakpoint('sm') {
+    font-size: 30px;
+  }
+  @include breakpoint('md') {
+    font-size: 50px;
+  }
 }
 
 .headLogo {
-  opacity: 0;
+  opacity: 1;
   transition: all .3s;
+}
+
+.icons {
+  position: absolute;
+  right: 50px;
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  > a {
+    color: white;
+    padding: 20px;
+    &:hover {
+      color: #d2d2d2;
+    }
+  }
 }
 
 .sticky {
   color: white;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.42);
-
-  .headLogo {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  .icons {
     opacity: 1;
   }
-
 }
-

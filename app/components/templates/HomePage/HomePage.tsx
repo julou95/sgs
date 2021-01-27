@@ -5,14 +5,26 @@ import Navigation from '@element/Navigation/Navigation';
 const HomePage: React.FC = () => (
     <>
         <Navigation />
-        <section className={styles.section}>
-            1
+        <section id="news" className={styles.section}>
+            <div className={styles.content}>
+                <div className={styles.headline}>
+                    <h1>NEWS : </h1>
+                </div>
+            </div>
         </section>
-        <section className={styles.section}>
-            2
+        <section id="music" className={styles.section}>
+            <div className={styles.content}>
+                <div className={styles.headline}>
+                    <h1>MUSIC : </h1>
+                </div>
+            </div>
         </section>
-        <section className={styles.section}>
-            3
+        <section id="contact" className={styles.section}>
+            <div className={styles.content}>
+                <div className={styles.headline}>
+                    <h1>CONTACT : </h1>
+                </div>
+            </div>
         </section>
     </>
 );

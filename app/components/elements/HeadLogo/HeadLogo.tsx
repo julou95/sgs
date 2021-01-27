@@ -1,9 +1,11 @@
 import styles from './HeadLogo.module.scss';
 
 const HeadLogo: React.FC = () => (
-    <div className={styles.text}>
-        SGS
-    </div>
+    <a href="#">
+        <div className={styles.text}>
+            SNITCHES GET STITCHES
+        </div>
+    </a>
 );
 
 export default HeadLogo;
