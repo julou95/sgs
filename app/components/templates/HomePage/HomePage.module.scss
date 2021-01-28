@@ -4,11 +4,11 @@
   position: relative;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #14181d;
+  background-color: $color-primary;
   color: white;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
   &:nth-of-type(1) {
     padding-top: 125px;
     @include breakpoint('sm') {
@@ -18,6 +18,21 @@
   &:nth-of-type(even) {
     background-color: #2d383e;
   }
+  @include breakpoint('md') {
+    padding-bottom: 50px;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $color-primary;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  height: 300px;
 }
 
 .content {

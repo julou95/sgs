@@ -13,7 +13,7 @@ type Props = {
 const NewsSlide: React.FC<Props> = ({title, text, imageUrl, linkUrl, linkText}) => {
  return (
      <div className={styles.slide}>
-         <img src={imageUrl} className={styles.image} alt={title} />
+         {imageUrl && <div style={{ backgroundImage: `url(${imageUrl})` }} className={styles.image}  />}
          <div className={styles.content}>
              <div>
                 <h2>{title}</h2>

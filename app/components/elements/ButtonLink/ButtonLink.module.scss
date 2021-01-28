@@ -1,3 +1,5 @@
+@import 'app.scss';
+
 .buttonLink {
   color: white;
   padding: 10px 20px;
@@ -6,8 +8,9 @@
   user-select: none;
   transition: all 0.2s ease;
   margin-bottom: 10px;
-  &:active {
+  &:active, &:hover {
     background-color: white;
-    color: #14181d;
+    color: $color-primary;
+    box-shadow: -2px -1px 0 #0c2ffb, -4px -2px 0 #2cfcfd, 2px 1px 0 #fb203b, 4px 2px 0 #fefc4b;
   }
 }

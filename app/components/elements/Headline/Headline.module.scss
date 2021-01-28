@@ -6,13 +6,14 @@
 }
 
 .headlineWrapper {
-  position: absolute;
   display: inline-block;
+  position: absolute;
+  left: -50px;
   padding: 10px 20px 10px 50px;
   border: 4px solid white;
-  background-color: #14181d;
+  background-color: $color-primary;
   transform: skew(-10deg, -3deg);
-  left: -50px;
+  box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 50%);
   z-index: 1;
 
   @include breakpoint('md') {

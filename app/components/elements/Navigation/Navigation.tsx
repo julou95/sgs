@@ -16,19 +16,21 @@ const Navigation: React.FC = () => {
 
     return (
         <div id="HEADER" className={styles.navBar}>
-            <div className={styles.headLogo}>
-                <HeadLogo />
-            </div>
-            <div className={styles.icons}>
-                <a href="#news" className={styles.iconButton}>
-                    <Icon icon={Icons.WHATSHOT} size={Sizes.MD} />
-                </a>
-                <a href="#music">
-                    <Icon icon={Icons.SPEAKER} size={Sizes.MD} />
-                </a>
-                <a href="#contact">
-                    <Icon icon={Icons.MAILOUTLINE} size={Sizes.MD} />
-                </a>
+            <div className={styles.content}>
+                <div className={styles.headLogo}>
+                    <HeadLogo />
+                </div>
+                <div className={styles.icons}>
+                    <a href="#news" className={styles.iconButton}>
+                        <Icon icon={Icons.WHATSHOT} size={Sizes.MD} />
+                    </a>
+                    <a href="#music">
+                        <Icon icon={Icons.SPEAKER} size={Sizes.MD} />
+                    </a>
+                    <a href="#contact">
+                        <Icon icon={Icons.MAILOUTLINE} size={Sizes.MD} />
+                    </a>
+                </div>
             </div>
             <div className={styles.mobileNavigation}>
                 <MobileNavigation />
