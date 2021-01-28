@@ -9,6 +9,7 @@ const HomePage: React.FC = () => (
         <section id="news" className={styles.section}>
             <div className={styles.content}>
                 <Headline tag={tags.H1} text="NEWS" />
+                this is dev!
             </div>
         </section>
         <section id="music" className={styles.section}>
