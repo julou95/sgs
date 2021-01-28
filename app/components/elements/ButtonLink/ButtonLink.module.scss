@@ -1,0 +1,13 @@
+.buttonLink {
+  color: white;
+  padding: 10px 20px;
+  border: 5px solid white;
+  transform: skew(-10deg, -3deg);
+  user-select: none;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+  &:active {
+    background-color: white;
+    color: #14181d;
+  }
+}

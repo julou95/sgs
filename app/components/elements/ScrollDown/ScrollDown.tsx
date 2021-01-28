@@ -1,12 +1,10 @@
 import styles from './ScrollDown.module.scss';
+import Icon, { Icons, Sizes } from '@element/Icon/Icon';
 
 
 const ScrollDown: React.FC = () => (
-    <a href="#news">
-        <div className={styles.downButton}>
-            <div className={styles.arrowLeft} />
-            <div className={styles.arrowRight} />
-        </div>
+    <a href="#news" className={styles.iconLink}>
+        <Icon icon={Icons.SCROLLDOWN} size={Sizes.LG} />
     </a>
 );
 

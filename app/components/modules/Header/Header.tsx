@@ -26,9 +26,9 @@ const Header: React.FC = () => (
           <div>STITCHES</div>
         </div>
       </div>
-    <div className={styles.scrollDown}>
-      <ScrollDown />
-    </div>
+      <div className={styles.scrollDown}>
+        <ScrollDown />
+      </div>
   </header>
 );
 

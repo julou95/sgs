@@ -1,16 +1,14 @@
 import { useEffect } from 'react';
 import HeadLogo from '@element/HeadLogo/HeadLogo';
 import Icon, { Icons, Sizes } from '@element/Icon/Icon';
+import MobileNavigation from '@element/MobileNavigation/MobileNavigation';
 import styles from './Navigation.module.scss';
 
 const Navigation: React.FC = () => {
     useEffect(() => {
         const element = document.getElementById('HEADER');
         const observer = new IntersectionObserver(
-            ([e]) => {
-                console.log('LJ - e.intersectionRatio:', window.pageYOffset, window.innerHeight);
-                return e.target.classList.toggle(styles.sticky, e.intersectionRatio < 1 &&  window.pageYOffset > window.innerHeight)
-            },
+            ([e]) => e.target.classList.toggle(styles.sticky, e.intersectionRatio < 1 &&  window.pageYOffset > window.innerHeight),
             {threshold: [1]}
         );
         observer.observe(element)
@@ -31,6 +29,9 @@ const Navigation: React.FC = () => {
                 <a href="#contact">
                     <Icon icon={Icons.MAILOUTLINE} size={Sizes.MD} />
                 </a>
+            </div>
+            <div className={styles.mobileNavigation}>
+                <MobileNavigation />
             </div>
         </div>
     );
