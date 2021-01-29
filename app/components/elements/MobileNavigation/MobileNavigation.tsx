@@ -26,6 +26,7 @@ const MobileNavigation: React.FC = () => {
                             <ButtonLink href="#" text="HOME" onClick={toggleNavi} />
                             <ButtonLink href="#news" text="NEWS" onClick={toggleNavi} />
                             <ButtonLink href="#music" text="MUSIC" onClick={toggleNavi} />
+                            <ButtonLink href="#about" text="ABOUT" onClick={toggleNavi} />
                             <ButtonLink href="#contact" text="CONTACT" onClick={toggleNavi} />
                         </div>
                     </div>

@@ -1,0 +1,53 @@
+@import 'app.scss';
+
+.band {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  .bandImage {
+    //border-radius: 5px;
+    margin-bottom: 20px;
+    height: 100%;
+    border: 5px solid white;
+    box-shadow: -2px -1px 0 #0c2ffb, -3px -2px 0 #2cfcfd, 2px 1px 0 #fb203b, 3px 2px 0 #fefc4b;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  @include breakpoint('lg') {
+    flex-direction: row;
+    .bandImage {
+      width: 50%;
+      margin-right: 20px;
+    }
+  }
+}
+
+.personas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  .person {
+    display: flex;
+    flex: 1 1 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    .pictureWrapper {
+      border: 5px solid white;
+      width: 100%;
+      //height: 250px;
+      //width: 250px;
+      overflow: hidden;
+      box-shadow: -2px -1px 0 #0c2ffb, -3px -2px 0 #2cfcfd, 2px 1px 0 #fb203b, 3px 2px 0 #fefc4b;
+      .profilePic {
+        width: 100%;
+      }
+    }
+  }
+}
